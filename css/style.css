@@ -52,13 +52,13 @@ body {
   z-index: 1; /* Stay on top */
   top: 80px; /* Stay at the top */
   left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
   background-color: #5a6b75;
 }
 .sideBar .search {
   padding: 20px 0px 15px 0px;
   display: flex;
   align-items: baseline;
+  border-bottom: 1px solid lightgray;
 }
 .sideBar .search svg {
   margin: 0px 10px 0px 10px;
@@ -71,6 +71,15 @@ body {
 }
 .sideBar .createList {
   padding: 15px;
+}
+.sideBar .createList ul {
+  padding: 0;
+  margin: 5px 0px;
+  list-style: none;
+}
+.sideBar .createList #createListName {
+  margin-left: 10px;
+  height: 25px;
 }
 .sideBar .createList button {
   cursor: pointer;
@@ -87,7 +96,7 @@ body {
 .sideBar .completed {
   padding: 0px 0px 0px 15px;
   position: relative;
-  top: 473px;
+  top: 460px;
   color: rgb(223, 223, 223);
 }
 .sideBar .completed:hover {
@@ -128,7 +137,7 @@ body {
   height: auto;
   max-width: 205%;
 }
-.listRepository .createdTasks ul li h6 {
+.listRepository .createdTasks ul li p {
   width: 70%;
   padding-left: 10px;
 }
