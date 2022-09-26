@@ -59,9 +59,33 @@ body {
     background-color: variables.$primaryHighlight;   
     .createList {
         padding: 10px;
+        list-style: none;   
         ul {
+            display:flex;
+            flex-direction: column;
             padding: 0;
             list-style: none;
+            max-width: 100%;
+            #addList {
+                margin-bottom:30px;
+            }
+            #dynamicList {
+                display: flex;
+                justify-content: space-between;
+                font-size: 17px;
+                margin: 20px 0px 0px -10px;
+                padding: 20px 0px 20px 14px;
+                max-width: 102%;
+                button {
+                    margin-right: 18px;
+                    background: none;
+                    color: variables.$secondaryColor;
+                    cursor: pointer;
+                }
+                button:hover {
+                    color: crimson;
+                }
+            }
         }
         #createListName {
             height: 25px;
@@ -79,16 +103,13 @@ body {
             
         }
     }
-    .createList:hover {
-        background-color: rgb(126, 142, 159);
-    }
     .completed {
         padding: 0px 0px 0px 15px;
         position: relative;
         top: 0;
-        color: rgb(223, 223, 223);
+        color: rgb(174, 174, 174);
     }
-    .completed:hover {
+    .completed:hover, #dynamicList:hover {
         background-color: rgb(126, 142, 159);
         cursor: pointer;
     }
@@ -101,8 +122,28 @@ body {
     height:89%;
     width:60%;
     .listHeader {
+        display:flex;
+        justify-content: space-between;
+    }
+    #listName {
         position:relative;
         left: 40px;
+    }
+    #addNewTask {
+        position: fixed;
+        top: 100px;
+        left: 1175px;
+        width: 75px;
+        height: 75px;
+        border: none;
+        border-radius: 30px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        background-color: variables.$secondaryColor;
+        font-size: 40px;
+    }
+    #addNewTask:hover {
+        cursor:pointer;
+        background-color: variables.$secondaryHighlight;
     }
     .createdTasks {
         ul {
@@ -110,6 +151,7 @@ body {
             flex-direction: column;
             list-style: none;
             position:absolute;
+            width: 100%;
             #completed {
                 transform: scale(1.5);
                 margin-right: 10px;
@@ -120,18 +162,35 @@ body {
                 display:flex;
                 align-items: baseline;
                 font-size: 25px;
-                padding: 25px 10px 10px 10px;
+                padding: 20px 10px 20px 10px;
                 border: 2px solid lightgray;
                 height: auto;
-                max-width: 205%;
-                p {
+                max-width: 100%;
+                #newTaskInput {
                     width: 70%;
                     padding-left: 10px;
+                    outline:none;
+                    border:none;
+                    background:none;
+                }
+                #goal {
+                    width: 70%;
+                    padding-left: 10px;
+                    display:none;
                 }
             }
             li:hover {
                 background-color: lightgray;
                 cursor:pointer
+            }
+            #edit {
+                position: relative;
+                left: 7.9rem;
+                cursor:pointer;
+            }
+            #edit:hover {
+                color: variables.$secondaryHighlight;
+                background-color: variables.$primaryColor;
             }
             #delete {
                 position: relative;
@@ -139,8 +198,7 @@ body {
                 cursor: pointer;
             }
             #delete:hover {
-                color: variables.$secondaryHighlight;
-                background-color: variables.$primaryColor;
+                background-color: crimson;
             }
         }
     }

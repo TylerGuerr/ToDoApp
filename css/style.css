@@ -56,10 +56,34 @@ body {
 }
 .sideBar .createList {
   padding: 10px;
+  list-style: none;
 }
 .sideBar .createList ul {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   list-style: none;
+  max-width: 100%;
+}
+.sideBar .createList ul #addList {
+  margin-bottom: 30px;
+}
+.sideBar .createList ul #dynamicList {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  margin: 20px 0px 0px -10px;
+  padding: 20px 0px 20px 14px;
+  max-width: 102%;
+}
+.sideBar .createList ul #dynamicList button {
+  margin-right: 18px;
+  background: none;
+  color: #f5ac41;
+  cursor: pointer;
+}
+.sideBar .createList ul #dynamicList button:hover {
+  color: crimson;
 }
 .sideBar .createList #createListName {
   height: 25px;
@@ -75,16 +99,13 @@ body {
 .sideBar .createList button:hover {
   background-color: #F6B454;
 }
-.sideBar .createList:hover {
-  background-color: rgb(126, 142, 159);
-}
 .sideBar .completed {
   padding: 0px 0px 0px 15px;
   position: relative;
   top: 0;
-  color: rgb(223, 223, 223);
+  color: rgb(174, 174, 174);
 }
-.sideBar .completed:hover {
+.sideBar .completed:hover, .sideBar #dynamicList:hover {
   background-color: rgb(126, 142, 159);
   cursor: pointer;
 }
@@ -98,14 +119,35 @@ body {
   width: 60%;
 }
 .listRepository .listHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.listRepository #listName {
   position: relative;
   left: 40px;
+}
+.listRepository #addNewTask {
+  position: fixed;
+  top: 100px;
+  left: 1175px;
+  width: 75px;
+  height: 75px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #f5ac41;
+  font-size: 40px;
+}
+.listRepository #addNewTask:hover {
+  cursor: pointer;
+  background-color: #F6B454;
 }
 .listRepository .createdTasks ul {
   display: flex;
   flex-direction: column;
   list-style: none;
   position: absolute;
+  width: 100%;
 }
 .listRepository .createdTasks ul #completed {
   transform: scale(1.5);
@@ -117,18 +159,35 @@ body {
   display: flex;
   align-items: baseline;
   font-size: 25px;
-  padding: 25px 10px 10px 10px;
+  padding: 20px 10px 20px 10px;
   border: 2px solid lightgray;
   height: auto;
-  max-width: 205%;
+  max-width: 100%;
 }
-.listRepository .createdTasks ul li p {
+.listRepository .createdTasks ul li #newTaskInput {
   width: 70%;
   padding-left: 10px;
+  outline: none;
+  border: none;
+  background: none;
+}
+.listRepository .createdTasks ul li #goal {
+  width: 70%;
+  padding-left: 10px;
+  display: none;
 }
 .listRepository .createdTasks ul li:hover {
   background-color: lightgray;
   cursor: pointer;
+}
+.listRepository .createdTasks ul #edit {
+  position: relative;
+  left: 7.9rem;
+  cursor: pointer;
+}
+.listRepository .createdTasks ul #edit:hover {
+  color: #F6B454;
+  background-color: #344955;
 }
 .listRepository .createdTasks ul #delete {
   position: relative;
@@ -136,8 +195,7 @@ body {
   cursor: pointer;
 }
 .listRepository .createdTasks ul #delete:hover {
-  color: #F6B454;
-  background-color: #344955;
+  background-color: crimson;
 }
 
 /*# sourceMappingURL=style.css.map */
