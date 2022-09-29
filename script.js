@@ -19,14 +19,14 @@ function listHeaderName() {
         })
     };
     function save() {
-        let dynamicList = document.getElementById('dynamicList');
-        window.localStorage.setItem('dynamicList', dynamicList.innerHTML);
-        console.log(dynamicList);
+        let sideBar = document.getElementById('sideBar');
+        window.localStorage.setItem('sideBar', sideBar);
+        console.log(sideBar);
     }
     function retrieve() {
-       let dynamicData = window.localStorage.getItem('dynamicList');
-       dynamicData.innerHTML = dynamicList;
-       console.log(dynamicData);
+       let sideBarData = window.localStorage.getItem('sideBar');
+       sideBarData.innerHTML = sideBar;
+       console.log(sideBarData);
     }
     save();
     retrieve();

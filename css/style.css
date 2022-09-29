@@ -68,9 +68,9 @@ body {
 .sideBar .createList ul #dynamicList {
   display: flex;
   justify-content: space-between;
-  font-size: 17px;
+  font-size: 20px;
   margin: 20px 0px 0px -10px;
-  padding: 20px 0px 20px 14px;
+  padding: 20px 0px 20px 26px;
   max-width: 110%;
 }
 .sideBar .createList ul #dynamicList button {
@@ -87,7 +87,9 @@ body {
   width: 92%;
   font-size: 20px;
   padding-left: 14px;
+  outline: none;
   border-top: none;
+  border-bottom: none;
 }
 .sideBar .createList button {
   cursor: pointer;

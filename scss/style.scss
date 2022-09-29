@@ -69,9 +69,9 @@ body {
             #dynamicList {
                 display: flex;
                 justify-content: space-between;
-                font-size: 17px;
+                font-size: 20px;
                 margin: 20px 0px 0px -10px;
-                padding: 20px 0px 20px 14px;
+                padding: 20px 0px 20px 26px;
                 max-width: 110%;
                 button {
                     margin-right: 18px;
@@ -89,7 +89,9 @@ body {
             width: 92%;
             font-size: 20px;
             padding-left: 14px;
+            outline:none;
             border-top:none;
+            border-bottom:none;
         }
         button {
             cursor:pointer;
