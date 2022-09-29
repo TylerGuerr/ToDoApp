@@ -58,24 +58,21 @@ body {
     left: 0;
     background-color: variables.$primaryHighlight;   
     .createList {
-        padding: 10px;
         list-style: none;   
         ul {
             display:flex;
             flex-direction: column;
             padding: 0;
+            margin: 0;
             list-style: none;
             max-width: 100%;
-            #addList {
-                margin-bottom:30px;
-            }
             #dynamicList {
                 display: flex;
                 justify-content: space-between;
                 font-size: 17px;
                 margin: 20px 0px 0px -10px;
                 padding: 20px 0px 20px 14px;
-                max-width: 102%;
+                max-width: 110%;
                 button {
                     margin-right: 18px;
                     background: none;
@@ -88,9 +85,11 @@ body {
             }
         }
         #createListName {
-            height: 25px;
-            width: 90%;
-            display:none;
+            height: 50px;
+            width: 92%;
+            font-size: 20px;
+            padding-left: 14px;
+            border-top:none;
         }
         button {
             cursor:pointer;

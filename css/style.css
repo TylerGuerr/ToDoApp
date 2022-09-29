@@ -55,18 +55,15 @@ body {
   background-color: #5a6b75;
 }
 .sideBar .createList {
-  padding: 10px;
   list-style: none;
 }
 .sideBar .createList ul {
   display: flex;
   flex-direction: column;
   padding: 0;
+  margin: 0;
   list-style: none;
   max-width: 100%;
-}
-.sideBar .createList ul #addList {
-  margin-bottom: 30px;
 }
 .sideBar .createList ul #dynamicList {
   display: flex;
@@ -74,7 +71,7 @@ body {
   font-size: 17px;
   margin: 20px 0px 0px -10px;
   padding: 20px 0px 20px 14px;
-  max-width: 102%;
+  max-width: 110%;
 }
 .sideBar .createList ul #dynamicList button {
   margin-right: 18px;
@@ -86,9 +83,11 @@ body {
   color: crimson;
 }
 .sideBar .createList #createListName {
-  height: 25px;
-  width: 90%;
-  display: none;
+  height: 50px;
+  width: 92%;
+  font-size: 20px;
+  padding-left: 14px;
+  border-top: none;
 }
 .sideBar .createList button {
   cursor: pointer;
