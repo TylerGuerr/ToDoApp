@@ -32,15 +32,19 @@
         <div class="createList" id="createList">
             <ul id="unorderedList">
                     <li><input minlength="1" maxlength="20" id="createListName" type="text" placeholder="New List Name..." onchange="listHeaderName()"></li>
+                    <div class="completed">
+                        <div class="clickable">
+                            <h3>Completed Tasks...</h3>
+                        </div>
+                    </div>
             </ul>
-        </div>
-        <div class="completed">
-            <div class="clickable">
-                <h3>Completed Tasks...</h3>
-            </div>
-        </div>
+           
+        </div>    
     </div>
     <div class="listRepository">
+        <a id="closeSideBar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-bar-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5zM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5z"/>
+          </svg></a>
         <div class="listHeader">
             <h1 id="listName">Create a List Name...</h1>
             <button id="addNewTask" onclick="addNewTask()">+</button>

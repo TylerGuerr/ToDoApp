@@ -52,6 +52,7 @@ body {
   z-index: 1; /* Stay on top */
   top: 80px; /* Stay at the top */
   left: 0;
+  overflow: scroll;
   background-color: #5a6b75;
 }
 .sideBar .createList {
@@ -119,6 +120,10 @@ body {
   height: 89%;
   width: 60%;
 }
+.listRepository #closeSideBar {
+  position: relative;
+  color: black;
+}
 .listRepository .listHeader {
   display: flex;
   justify-content: space-between;
@@ -167,6 +172,7 @@ body {
 }
 .listRepository .createdTasks ul li #newTaskInput {
   width: 70%;
+  max-width: 70%;
   padding-left: 10px;
   outline: none;
   border: none;
@@ -174,6 +180,7 @@ body {
 }
 .listRepository .createdTasks ul li #goal {
   width: 70%;
+  max-width: 70%;
   padding-left: 10px;
   display: none;
 }
